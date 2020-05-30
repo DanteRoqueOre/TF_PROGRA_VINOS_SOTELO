@@ -14,6 +14,3 @@ public interface IEventRepository extends JpaRepository<Event, Integer> { //con 
 	@Query("from Event e where e.nameEvent like %:nameEvent%")
 	List<Event> buscarNombre(@Param("nameEvent") String nombreEvent); // es lo unico que se declara para buscar categoria
 }
-
-
-

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package pe.edu.upc.spring.repository;
 
 import java.util.List;
@@ -13,4 +14,21 @@ import pe.edu.upc.spring.model.Vino;
 public interface IVinoRepository extends JpaRepository<Vino,Integer>{
 	@Query("from Vino v where v.nameVino like %:nameVino%")
 	List<Vino>buscarNombre(@Param("nameVino")String nombreVino);
+=======
+package pe.edu.upc.spring.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import pe.edu.upc.spring.model.Vino;
+
+@Repository
+public interface IVinoRepository extends JpaRepository<Vino,Integer>{
+	@Query("from Vino v where v.nameVino like %:nameVino%")
+	List<Vino>buscarNombre(@Param("nameVino")String nombreVino);
+>>>>>>> branch 'master' of https://github.com/Thales-cod/TF_PROGRA_VINOS_SOTELO.git
 }
