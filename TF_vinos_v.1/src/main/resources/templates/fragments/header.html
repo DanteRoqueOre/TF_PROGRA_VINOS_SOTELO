@@ -21,6 +21,10 @@
 		<nav class="navbar navbar-inverse">
 			<div class="container">
 			
+			    <div class="navbar-header">
+				    <img th:src="@{/imagenes/sotelo.png}" width="50" height="50" alt="logo" align="middle"></img>
+				</div>
+			
 				<div class="navbar-header">
 					<a class="navbar-brand" th:href="@{/event/bienvenido}">VINOS SOTELO</a>
 				</div>
@@ -31,8 +35,12 @@
 						<li class="active"><a th:href="@{/event/listar}">Evento</a></li>
 						<li class="active"><a th:href="@{/vino/listar}">Vinos</a></li>
 						<li class="active"><a th:href="@{/user/listar}">Usuario</a></li>
-
 					</ul>
+					
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Regístrate </a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Iniciar sesión </a></li>
+                    </ul>
 					
 				</div>
 			</div>

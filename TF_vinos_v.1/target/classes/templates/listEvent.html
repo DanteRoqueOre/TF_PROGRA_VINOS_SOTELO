@@ -33,11 +33,11 @@
                 <div class="row clearfix">
 				    <div class="col-md-12 column" >
 					<a  style="border-bottom-color: green" th:href="@{/event/irRegistrar}" id="add-row" type="button"
-						class="btn btn-primary btn-md left-block"> <span
+						class="btn btn-info btn-md left-block"> <span
 						class="glyphicon glyphicon-plus" ></span> Evento
 					</a>
 					<a  style="border-bottom-color: green" th:href="@{/event/irBuscar}" id="add-row" type="button"
-						class="btn btn-primary btn-md left-block"> <span
+						class="btn btn-success btn-md left-block"> <span
 						class="glyphicon glyphicon-search" ></span> 
 					</a>
 					<table class="table table-bordered table-hover table-striped"
@@ -54,8 +54,10 @@
 							<tr th:each="even: ${listaEventos}">
 								<td th:text="${even.idEvent}"></td>
 								<td th:text="${even.nameEvent}"></td>
-								<td><a th:href="@{/event/eliminar?id=}+${even.idEvent}">Eliminar</a></td>
-								<td><a th:href="@{'/event/modificar/' + ${even.idEvent}}">Modificar</a></td>
+								<td><a style="border-bottom-color: green" th:href="@{/event/eliminar?id=}+${even.idEvent}" id="add-row" type="button"
+						               class="btn btn-danger btn-md center-block">Eliminar</a></td>
+								<td><a style="border-bottom-color: green" th:href="@{'/event/modificar/' + ${even.idEvent}}" id="add-row" type="button"
+						               class="btn btn-warning btn-md center-block">Modificar</a></td>
 							</tr>
 						</tbody>
 
